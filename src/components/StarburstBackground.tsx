@@ -1,16 +1,15 @@
-
 import React from 'react';
 
 const StarburstBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {/* Main starburst - following the designer's steps */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4">
+      {/* Main starburst - static version (no animation) with repositioned placement */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3/4">
         <svg
           width="800"
           height="600"
           viewBox="0 0 800 600"
-          className="animate-starburst"
+          // Removed animation class
         >
           <defs>
             {/* Blur filter - Step 3 from the design */}
@@ -64,8 +63,8 @@ const StarburstBackground = () => {
         </svg>
       </div>
 
-      {/* Additional animated glow effect */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/4">
+      {/* Additional animated glow effect - keeping the pulse animation but repositioning */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3/4">
         <div 
           className="w-96 h-96 rounded-full bg-hero-green opacity-20 animate-glow-pulse"
           style={{

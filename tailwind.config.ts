@@ -92,11 +92,7 @@ export default {
 						height: '0'
 					}
 				},
-				'starburst-rotate': {
-					'0%': { transform: 'rotate(0deg) scale(1)' },
-					'50%': { transform: 'rotate(180deg) scale(1.1)' },
-					'100%': { transform: 'rotate(360deg) scale(1)' }
-				},
+				// Removed 'starburst-rotate' animation since we're not using it anymore
 				'fade-in-up': {
 					'0%': { 
 						opacity: '0',
@@ -121,7 +117,7 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'starburst': 'starburst-rotate 20s linear infinite',
+				// Removed 'starburst' animation
 				'fade-in-up': 'fade-in-up 0.8s ease-out',
 				'glow-pulse': 'glow-pulse 4s ease-in-out infinite'
 			}
