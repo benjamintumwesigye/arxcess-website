@@ -9,9 +9,9 @@ const Hero = () => {
       {/* Starburst Background - Step 4: Integration */}
       <StarburstBackground />
       
-      {/* Navigation */}
-      <nav className="absolute top-0 left-0 right-0 z-20 p-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+      {/* Navigation - now with sticky positioning and backdrop blur */}
+      <nav className="fixed top-0 left-0 right-0 z-30 backdrop-blur-md bg-black/30 border-b border-hero-green/10">
+        <div className="max-w-7xl mx-auto flex items-center justify-between p-6">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-hero-green rounded-lg flex items-center justify-center">
               <span className="text-black font-bold text-sm">L</span>
@@ -34,8 +34,8 @@ const Hero = () => {
         </div>
       </nav>
 
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24">
+      {/* Main Content - Added padding-top to account for the fixed header */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32">
         <div className="max-w-4xl">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-hero-green/10 border border-hero-green/20 rounded-full mb-8 animate-fade-in-up">

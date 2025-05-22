@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -92,7 +91,6 @@ export default {
 						height: '0'
 					}
 				},
-				// Removed 'starburst-rotate' animation since we're not using it anymore
 				'fade-in-up': {
 					'0%': { 
 						opacity: '0',
@@ -117,9 +115,11 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				// Removed 'starburst' animation
 				'fade-in-up': 'fade-in-up 0.8s ease-out',
 				'glow-pulse': 'glow-pulse 4s ease-in-out infinite'
+			},
+			backdropBlur: {
+				xs: '2px',
 			}
 		}
 	},
