@@ -1,12 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Hero from "@/components/Hero";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Hero />
+      
+      {/* Additional sections can be added here */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Following the Designer's Workflow
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            This hero section was created by following the exact design process shown in the uploaded image: 
+            starting with a simple star, increasing the ray count, adding blur effects, and integrating everything 
+            into a beautiful hero background.
+          </p>
+        </div>
+      </section>
     </div>
   );
 };

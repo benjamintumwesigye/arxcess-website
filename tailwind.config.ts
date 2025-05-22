@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				hero: {
+					green: '#00ff88',
+					'green-light': '#88ffbb',
+					dark: '#0a0a0a',
+					'dark-light': '#1a1a1a'
 				}
 			},
 			borderRadius: {
@@ -84,11 +91,39 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'starburst-rotate': {
+					'0%': { transform: 'rotate(0deg) scale(1)' },
+					'50%': { transform: 'rotate(180deg) scale(1.1)' },
+					'100%': { transform: 'rotate(360deg) scale(1)' }
+				},
+				'fade-in-up': {
+					'0%': { 
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': { 
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'glow-pulse': {
+					'0%, 100%': { 
+						filter: 'blur(20px)',
+						opacity: '0.4'
+					},
+					'50%': { 
+						filter: 'blur(30px)',
+						opacity: '0.6'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'starburst': 'starburst-rotate 20s linear infinite',
+				'fade-in-up': 'fade-in-up 0.8s ease-out',
+				'glow-pulse': 'glow-pulse 4s ease-in-out infinite'
 			}
 		}
 	},
