@@ -1,16 +1,33 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import StarburstBackground from './StarburstBackground';
 
 const Hero = () => {
+  const [scrolled, setScrolled] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      // Apply background when scrolled more than 5% of viewport height
+      const scrollThreshold = window.innerHeight * 0.05;
+      setScrolled(window.scrollY > scrollThreshold);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-hero-dark via-hero-dark-light to-black overflow-hidden flex items-center">
       {/* Starburst Background - Step 4: Integration */}
       <StarburstBackground />
       
-      {/* Navigation - now with sticky positioning and backdrop blur */}
-      <nav className="fixed top-0 left-0 right-0 z-30 backdrop-blur-md bg-black/30 border-b border-hero-green/10">
+      {/* Navigation - with scroll-activated background */}
+      <nav className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
+        scrolled ? 'backdrop-blur-md bg-black/30 border-b border-hero-green/10' : 'bg-transparent'
+      }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between p-6">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-hero-green rounded-lg flex items-center justify-center">
