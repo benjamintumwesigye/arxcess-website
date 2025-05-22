@@ -3,13 +3,12 @@ import React from 'react';
 const StarburstBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {/* Main starburst - static version (no animation) with repositioned placement */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3/4">
+      {/* Main starburst - static version with increased width and adjusted position */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
         <svg
-          width="800"
-          height="600"
-          viewBox="0 0 800 600"
-          // Removed animation class
+          width="1200"
+          height="900"
+          viewBox="0 0 1200 900"
         >
           <defs>
             {/* Blur filter - Step 3 from the design */}
@@ -35,12 +34,12 @@ const StarburstBackground = () => {
           </defs>
 
           {/* Step 1 & 2: Star with increased count (many rays) and decreased opacity */}
-          <g transform="translate(400, 300)">
+          <g transform="translate(600, 450)">
             {/* Generate multiple rays - increasing the "count" as shown in step 2 */}
-            {Array.from({ length: 24 }, (_, i) => (
-              <g key={i} transform={`rotate(${i * 15})`}>
+            {Array.from({ length: 36 }, (_, i) => (
+              <g key={i} transform={`rotate(${i * 10})`}>
                 <path
-                  d="M 0,0 L 3,150 L 0,300 L -3,150 Z"
+                  d="M 0,0 L 4,225 L 0,450 L -4,225 Z"
                   fill="url(#starGradient)"
                   filter="url(#starblur)"
                   opacity="0.6"
@@ -49,10 +48,10 @@ const StarburstBackground = () => {
             ))}
             
             {/* Additional inner rays for depth */}
-            {Array.from({ length: 16 }, (_, i) => (
-              <g key={`inner-${i}`} transform={`rotate(${i * 22.5 + 11.25})`}>
+            {Array.from({ length: 24 }, (_, i) => (
+              <g key={`inner-${i}`} transform={`rotate(${i * 15 + 7.5})`}>
                 <path
-                  d="M 0,0 L 2,100 L 0,200 L -2,100 Z"
+                  d="M 0,0 L 3,150 L 0,300 L -3,150 Z"
                   fill="url(#starGradient)"
                   filter="url(#glow)"
                   opacity="0.3"
@@ -64,11 +63,13 @@ const StarburstBackground = () => {
       </div>
 
       {/* Additional animated glow effect - keeping the pulse animation but repositioning */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-3/4">
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
         <div 
-          className="w-96 h-96 rounded-full bg-hero-green opacity-20 animate-glow-pulse"
+          className="w-144 h-144 rounded-full bg-hero-green opacity-20 animate-glow-pulse"
           style={{
-            background: 'radial-gradient(circle, rgba(0,255,136,0.3) 0%, rgba(0,255,136,0.1) 40%, transparent 70%)'
+            background: 'radial-gradient(circle, rgba(0,255,136,0.3) 0%, rgba(0,255,136,0.1) 40%, transparent 70%)',
+            width: '36rem',
+            height: '36rem'
           }}
         />
       </div>
