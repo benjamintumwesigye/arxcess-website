@@ -31,9 +31,9 @@ const Hero = () => {
         <div className="max-w-7xl mx-auto flex items-center justify-between p-6">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-hero-green rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-sm">L</span>
+              <span className="text-black font-bold text-sm">A</span>
             </div>
-            <span className="text-white font-semibold text-xl">LovableSVG</span>
+            <span className="text-white font-semibold text-xl">Arxcess</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -64,9 +64,9 @@ const Hero = () => {
             className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight animate-fade-in-up text-center"
             style={{ textWrap: 'balance' }}
           >
-            SIMPLE, SECURE,{' '}
+            Innovative Solutions for{' '}
             <span className="bg-gradient-to-r from-hero-green to-hero-green-light bg-clip-text text-transparent">
-              SVG
+              Your Business
             </span>
           </h1>
 
