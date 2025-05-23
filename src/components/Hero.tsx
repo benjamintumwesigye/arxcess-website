@@ -70,9 +70,9 @@ const Hero = () => {
             </span>
           </h1>
 
-          {/* Subtitle */}
+          {/* Subtitle - Updated with new text */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up">
-            Unlock scalable software tailored to your needs, from custom builds to seamless subscriptions.
+            Leveraging cutting-edge tools, we transform simple ideas into complex, business-ready software—custom-built or subscription-based.
           </p>
 
           {/* Feature badges */}
