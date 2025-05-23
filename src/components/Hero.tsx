@@ -52,15 +52,18 @@ const Hero = () => {
       </nav>
 
       {/* Main Content - Added padding-top to account for the fixed header */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32">
-        <div className="max-w-4xl">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 text-center">
+        <div className="max-w-4xl mx-auto">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-hero-green/10 border border-hero-green/20 rounded-full mb-8 animate-fade-in-up">
             <span className="text-hero-green text-sm font-medium">✨ SVG Hero Design Flow</span>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight animate-fade-in-up">
+          {/* Main Heading - Updated with text-wrap: balance and background-clip: text */}
+          <h1 
+            className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight animate-fade-in-up text-center"
+            style={{ textWrap: 'balance' }}
+          >
             SIMPLE, SECURE,{' '}
             <span className="bg-gradient-to-r from-hero-green to-hero-green-light bg-clip-text text-transparent">
               SVG
@@ -68,13 +71,13 @@ const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl animate-fade-in-up">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up">
             Experience the power of animated SVG backgrounds following professional design workflows. 
             From simple stars to complex starbursts.
           </p>
 
           {/* Feature badges */}
-          <div className="flex flex-wrap gap-4 mb-12 animate-fade-in-up">
+          <div className="flex flex-wrap gap-4 mb-12 animate-fade-in-up justify-center">
             <div className="flex items-center space-x-2 text-gray-300">
               <div className="w-2 h-2 bg-hero-green rounded-full"></div>
               <span>Encrypted Connections</span>
@@ -90,7 +93,7 @@ const Hero = () => {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up">
+          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up justify-center">
             <Button 
               size="lg" 
               className="bg-hero-green text-black hover:bg-hero-green-light transition-all duration-300 font-semibold text-lg px-8 py-4"
