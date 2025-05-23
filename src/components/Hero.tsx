@@ -64,31 +64,30 @@ const Hero = () => {
             className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight animate-fade-in-up text-center"
             style={{ textWrap: 'balance' }}
           >
-            Innovative Solutions for{' '}
+            Transform Your Business with{' '}
             <span className="bg-gradient-to-r from-hero-green to-hero-green-light bg-clip-text text-transparent">
-              Your Business
+              Custom Software
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up">
-            Experience the power of animated SVG backgrounds following professional design workflows. 
-            From simple stars to complex starbursts.
+            Unlock scalable software tailored to your needs, from custom builds to seamless subscriptions.
           </p>
 
           {/* Feature badges */}
           <div className="flex flex-wrap gap-4 mb-12 animate-fade-in-up justify-center">
             <div className="flex items-center space-x-2 text-gray-300">
               <div className="w-2 h-2 bg-hero-green rounded-full"></div>
-              <span>Encrypted Connections</span>
+              <span>Custom Development</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-300">
               <div className="w-2 h-2 bg-hero-green rounded-full"></div>
-              <span>No-Logs Policy</span>
+              <span>Scalable Subscriptions</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-300">
               <div className="w-2 h-2 bg-hero-green rounded-full"></div>
-              <span>Global Server Access</span>
+              <span>24/7 Support</span>
             </div>
           </div>
 
@@ -98,7 +97,7 @@ const Hero = () => {
               size="lg" 
               className="bg-hero-green text-black hover:bg-hero-green-light transition-all duration-300 font-semibold text-lg px-8 py-4"
             >
-              Get Started Now
+              Start Your Journey
             </Button>
             <Button 
               size="lg" 
@@ -116,8 +115,8 @@ const Hero = () => {
               <div className="text-gray-400">Uptime</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-2">150+</div>
-              <div className="text-gray-400">Countries</div>
+              <div className="text-3xl font-bold text-white mb-2">100+</div>
+              <div className="text-gray-400">Clients</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-white mb-2">24/7</div>
