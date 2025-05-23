@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen font-chirp">
       <Hero />
       
       {/* Additional sections can be added here */}

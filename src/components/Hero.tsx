@@ -20,7 +20,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-hero-dark via-hero-dark-light to-black overflow-hidden flex items-center">
+    <section className="font-chirp relative min-h-screen bg-gradient-to-br from-hero-dark via-hero-dark-light to-black overflow-hidden flex items-center">
       {/* Starburst Background - Step 4: Integration */}
       <StarburstBackground />
       
