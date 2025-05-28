@@ -51,77 +51,97 @@ const Hero = () => {
         </div>
       </nav>
 
-      {/* Main Content - Added padding-top to account for the fixed header */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 text-center">
-        <div className="max-w-4xl mx-auto">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-hero-green/10 border border-hero-green/20 rounded-full mb-8 animate-fade-in-up">
-            <span className="text-hero-green text-sm font-medium">✨ SVG Hero Design Flow</span>
-          </div>
-
-          {/* Main Heading - Updated with text-wrap: balance and background-clip: text */}
-          <h1 
-            className="text-6xl md:text-8xl font-bold text-white mb-6 leading-tight animate-fade-in-up text-center"
-            style={{ textWrap: 'balance' }}
-          >
-            Transform Your Business with{' '}
-            <span className="bg-gradient-to-r from-hero-green to-hero-green-light bg-clip-text text-transparent">
-              Custom Software
-            </span>
-          </h1>
-
-          {/* Subtitle - Updated with new text */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in-up">
-            Leveraging cutting-edge tools, we transform simple ideas into complex, business-ready software—custom-built or subscription-based.
-          </p>
-
-          {/* Feature badges */}
-          <div className="flex flex-wrap gap-4 mb-12 animate-fade-in-up justify-center">
-            <div className="flex items-center space-x-2 text-gray-300">
-              <div className="w-2 h-2 bg-hero-green rounded-full"></div>
-              <span>Custom Development</span>
+      {/* Main Content - Updated to two-column layout */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="text-left">
+            {/* Badge */}
+            <div className="inline-flex items-center px-4 py-2 bg-hero-green/10 border border-hero-green/20 rounded-full mb-8 animate-fade-in-up">
+              <span className="text-hero-green text-sm font-medium">✨ SVG Hero Design Flow</span>
             </div>
-            <div className="flex items-center space-x-2 text-gray-300">
-              <div className="w-2 h-2 bg-hero-green rounded-full"></div>
-              <span>Scalable Subscriptions</span>
-            </div>
-            <div className="flex items-center space-x-2 text-gray-300">
-              <div className="w-2 h-2 bg-hero-green rounded-full"></div>
-              <span>24/7 Support</span>
-            </div>
-          </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up justify-center">
-            <Button 
-              size="lg" 
-              className="bg-hero-green text-black hover:bg-hero-green-light transition-all duration-300 font-semibold text-lg px-8 py-4"
+            {/* Main Heading */}
+            <h1 
+              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up"
+              style={{ textWrap: 'balance' }}
             >
-              Start Your Journey
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-gray-600 text-white hover:bg-white/10 transition-all duration-300 font-semibold text-lg px-8 py-4"
-            >
-              Learn More
-            </Button>
+              Transform Your Business with{' '}
+              <span className="bg-gradient-to-r from-hero-green to-hero-green-light bg-clip-text text-transparent">
+                Custom Software
+              </span>
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in-up">
+              Leveraging cutting-edge tools, we transform simple ideas into complex, business-ready software—custom-built or subscription-based.
+            </p>
+
+            {/* Feature badges */}
+            <div className="flex flex-wrap gap-4 mb-12 animate-fade-in-up">
+              <div className="flex items-center space-x-2 text-gray-300">
+                <div className="w-2 h-2 bg-hero-green rounded-full"></div>
+                <span>Custom Development</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300">
+                <div className="w-2 h-2 bg-hero-green rounded-full"></div>
+                <span>Scalable Subscriptions</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-300">
+                <div className="w-2 h-2 bg-hero-green rounded-full"></div>
+                <span>24/7 Support</span>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up mb-12">
+              <Button 
+                size="lg" 
+                className="bg-hero-green text-black hover:bg-hero-green-light transition-all duration-300 font-semibold text-lg px-8 py-4"
+              >
+                Start Your Journey
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-gray-600 text-white hover:bg-white/10 transition-all duration-300 font-semibold text-lg px-8 py-4"
+              >
+                Learn More
+              </Button>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 animate-fade-in-up">
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+                <div className="text-gray-400">Uptime</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">100+</div>
+                <div className="text-gray-400">Clients</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                <div className="text-gray-400">Support</div>
+              </div>
+            </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-16 animate-fade-in-up">
-            <div>
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-400">Uptime</div>
+          {/* Right Column - Image */}
+          <div className="relative animate-fade-in-up">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=600" 
+                alt="Person using MacBook Pro - representing custom software development"
+                className="w-full h-auto object-cover"
+              />
+              {/* Overlay gradient for better integration */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-hero-green/10"></div>
             </div>
-            <div>
-              <div className="text-3xl font-bold text-white mb-2">100+</div>
-              <div className="text-gray-400">Clients</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-gray-400">Support</div>
-            </div>
+            
+            {/* Floating elements for visual interest */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-hero-green/20 rounded-full blur-xl animate-glow-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-hero-green/30 rounded-full blur-lg animate-glow-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
         </div>
       </div>
