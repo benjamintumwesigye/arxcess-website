@@ -127,16 +127,39 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Image */}
+          {/* Right Column - Bento Grid Images (replacing single image) */}
           <div className="relative animate-fade-in-up">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=600" 
-                alt="Person using MacBook Pro - representing custom software development"
-                className="w-full h-auto object-cover"
-              />
-              {/* Overlay gradient for better integration */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-hero-green/10"></div>
+            {/* Bento Grid Layout */}
+            <div className="grid grid-cols-2 gap-3 h-[450px]">
+              {/* Large featured image */}
+              <div className="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl shadow-2xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=600" 
+                  alt="Person using MacBook Pro - representing custom software development"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-hero-green/10"></div>
+              </div>
+              
+              {/* Top right image */}
+              <div className="relative group overflow-hidden rounded-2xl shadow-xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&h=300" 
+                  alt="Macro photography of black circuit board - Technical expertise"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-hero-green/10"></div>
+              </div>
+              
+              {/* Bottom right image */}
+              <div className="relative group overflow-hidden rounded-2xl shadow-xl">
+                <img 
+                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=400&h=300" 
+                  alt="Turned on gray laptop computer - Modern solutions"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-hero-green/10"></div>
+              </div>
             </div>
             
             {/* Floating elements for visual interest */}
