@@ -13,7 +13,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-gray-50 py-20 relative">
       <div className="max-w-4xl mx-auto px-6">
         {/* Newsletter Signup */}
         <div className="bg-white rounded-2xl p-12 shadow-sm border border-gray-100 text-center mb-8">
@@ -48,9 +48,11 @@ const NewsletterSection = () => {
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Skip Tracing Section */}
-        <div className="bg-gradient-to-r from-black via-gray-900 to-black rounded-2xl p-12 text-white relative overflow-hidden">
+      {/* Skip Tracing Section - Floating Card */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 z-10 w-full max-w-4xl px-6">
+        <div className="bg-gradient-to-br from-primary via-gray-900 to-black rounded-2xl p-12 text-white relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
