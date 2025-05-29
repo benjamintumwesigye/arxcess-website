@@ -1,5 +1,6 @@
-
 import Hero from "@/components/Hero";
+import NewsletterSection from "@/components/NewsletterSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -78,6 +79,12 @@ const Index = () => {
           </p>
         </div>
       </section>
+
+      {/* Newsletter Section */}
+      <NewsletterSection />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
