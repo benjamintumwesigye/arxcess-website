@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const StarburstBackground = () => {
@@ -27,9 +28,9 @@ const StarburstBackground = () => {
 
             {/* Gradient for the rays */}
             <radialGradient id="starGradient" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#00ff88" stopOpacity="0.8" />
-              <stop offset="50%" stopColor="#44ff99" stopOpacity="0.4" />
-              <stop offset="100%" stopColor="#88ffbb" stopOpacity="0.1" />
+              <stop offset="0%" stopColor="#1e81c5" stopOpacity="0.8" />
+              <stop offset="50%" stopColor="#4a9edd" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#7bb3e8" stopOpacity="0.1" />
             </radialGradient>
           </defs>
 
@@ -65,9 +66,9 @@ const StarburstBackground = () => {
       {/* Additional animated glow effect - keeping the pulse animation but repositioning */}
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2/3">
         <div 
-          className="w-144 h-144 rounded-full bg-hero-green opacity-20 animate-glow-pulse"
+          className="w-144 h-144 rounded-full opacity-20 animate-glow-pulse"
           style={{
-            background: 'radial-gradient(circle, rgba(0,255,136,0.3) 0%, rgba(0,255,136,0.1) 40%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(30,129,197,0.3) 0%, rgba(30,129,197,0.1) 40%, transparent 70%)',
             width: '36rem',
             height: '36rem'
           }}
@@ -79,8 +80,8 @@ const StarburstBackground = () => {
         className="absolute inset-0 opacity-5"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(0,255,136,0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(0,255,136,0.1) 1px, transparent 1px)
+            linear-gradient(rgba(30,129,197,0.1) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(30,129,197,0.1) 1px, transparent 1px)
           `,
           backgroundSize: '50px 50px'
         }}

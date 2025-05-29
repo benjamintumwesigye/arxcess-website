@@ -26,12 +26,12 @@ const Hero = () => {
       
       {/* Navigation - with scroll-activated background */}
       <nav className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
-        scrolled ? 'backdrop-blur-md bg-black/30 border-b border-hero-green/10' : 'bg-transparent'
+        scrolled ? 'backdrop-blur-md bg-black/30 border-b border-primary/10' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between p-6">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-hero-green rounded-lg flex items-center justify-center">
-              <span className="text-black font-bold text-sm">A</span>
+            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">A</span>
             </div>
             <span className="text-white font-semibold text-xl">Arxcess</span>
           </div>
@@ -44,7 +44,7 @@ const Hero = () => {
           </div>
           
           <Button 
-            className="bg-hero-green text-black hover:bg-hero-green-light transition-all duration-300 font-semibold px-6"
+            className="bg-primary text-white hover:bg-primary/80 transition-all duration-300 font-semibold px-6"
           >
             Get Started
           </Button>
@@ -57,8 +57,8 @@ const Hero = () => {
           {/* Left Column - Content */}
           <div className="text-left">
             {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-hero-green/10 border border-hero-green/20 rounded-full mb-8 animate-fade-in-up">
-              <span className="text-hero-green text-sm font-medium">✨ SVG Hero Design Flow</span>
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-8 animate-fade-in-up">
+              <span className="text-primary text-sm font-medium">✨ SVG Hero Design Flow</span>
             </div>
 
             {/* Main Heading */}
@@ -67,7 +67,7 @@ const Hero = () => {
               style={{ textWrap: 'balance' }}
             >
               Transform Your Business with{' '}
-              <span className="bg-gradient-to-r from-hero-green to-hero-green-light bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
                 Custom Software
               </span>
             </h1>
@@ -80,15 +80,15 @@ const Hero = () => {
             {/* Feature badges */}
             <div className="flex flex-wrap gap-4 mb-12 animate-fade-in-up">
               <div className="flex items-center space-x-2 text-gray-300">
-                <div className="w-2 h-2 bg-hero-green rounded-full"></div>
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span>Custom Development</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-300">
-                <div className="w-2 h-2 bg-hero-green rounded-full"></div>
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span>Scalable Subscriptions</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-300">
-                <div className="w-2 h-2 bg-hero-green rounded-full"></div>
+                <div className="w-2 h-2 bg-primary rounded-full"></div>
                 <span>24/7 Support</span>
               </div>
             </div>
@@ -97,7 +97,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up mb-12">
               <Button 
                 size="lg" 
-                className="bg-hero-green text-black hover:bg-hero-green-light transition-all duration-300 font-semibold text-lg px-8 py-4"
+                className="bg-primary text-white hover:bg-primary/80 transition-all duration-300 font-semibold text-lg px-8 py-4"
               >
                 Start Your Journey
               </Button>
@@ -138,7 +138,7 @@ const Hero = () => {
                   alt="Person using MacBook Pro - representing custom software development"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-hero-green/10"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-primary/10"></div>
               </div>
               
               {/* Top right image */}
@@ -148,7 +148,7 @@ const Hero = () => {
                   alt="Macro photography of black circuit board - Technical expertise"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-hero-green/10"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-primary/10"></div>
               </div>
               
               {/* Bottom right image */}
@@ -158,13 +158,13 @@ const Hero = () => {
                   alt="Turned on gray laptop computer - Modern solutions"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-hero-green/10"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-primary/10"></div>
               </div>
             </div>
             
             {/* Floating elements for visual interest */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-hero-green/20 rounded-full blur-xl animate-glow-pulse"></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-hero-green/30 rounded-full blur-lg animate-glow-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-glow-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary/30 rounded-full blur-lg animate-glow-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
         </div>
       </div>
