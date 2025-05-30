@@ -1,6 +1,8 @@
 import Hero from "@/components/Hero";
 import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
+import TechStack from "@/components/Tech";
+import TeamSection from "@/components/TeamSection";
 
 const Index = () => {
   return (
@@ -79,6 +81,10 @@ const Index = () => {
           </p>
         </div>
       </section>
+
+      <TeamSection />
+
+      <TechStack />
 
       {/* Newsletter Section */}
       <NewsletterSection />

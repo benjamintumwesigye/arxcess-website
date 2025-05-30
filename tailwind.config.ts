@@ -114,7 +114,8 @@ export default {
 						filter: 'blur(30px)',
 						opacity: '0.6'
 					}
-				}
+				},
+				
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
