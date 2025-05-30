@@ -22,24 +22,45 @@ const teamMembers = [
     role: "HR Specialist", 
     image: "https://randomuser.me/api/portraits/women/68.jpg",
   },
+  {
+    name: "David Chen",
+    role: "Product Designer", 
+    image: "https://randomuser.me/api/portraits/men/22.jpg",
+  },
 ];
 
-function TeamMemberCard({ name, role, image }: { 
+function TeamMemberCard({ name, role, image, position }: { 
   name: string; 
   role: string; 
   image: string;
+  position: 'far-left' | 'left' | 'center' | 'right' | 'far-right';
 }) {
+  const getCardStyles = () => {
+    switch (position) {
+      case 'far-left':
+      case 'far-right':
+        return "opacity-30 scale-75 blur-sm";
+      case 'left':
+      case 'right':
+        return "opacity-60 grayscale";
+      case 'center':
+        return "opacity-100 scale-105";
+      default:
+        return "";
+    }
+  };
+
   return (
-    <div className="flex flex-col items-center text-center px-4">
-      <div className="w-80 h-80 rounded-full overflow-hidden bg-gray-100 mb-6 shadow-lg">
+    <div className={`flex flex-col items-center text-center px-4 transition-all duration-500 ${getCardStyles()}`}>
+      <div className="w-64 h-64 rounded-full overflow-hidden bg-gray-100 mb-6 shadow-lg">
         <img
           src={image}
           alt={name}
           className="w-full h-full object-cover"
         />
       </div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <p className="text-gray-600 text-lg">{role}</p>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{name}</h3>
+      <p className="text-gray-600 text-base">{role}</p>
     </div>
   );
 }
@@ -47,7 +68,21 @@ function TeamMemberCard({ name, role, image }: {
 const TeamSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const visibleMembers = teamMembers.slice(currentIndex, currentIndex + 3);
+  const getVisibleMembers = () => {
+    const positions: Array<'far-left' | 'left' | 'center' | 'right' | 'far-right'> = ['far-left', 'left', 'center', 'right', 'far-right'];
+    const visibleMembers = [];
+    
+    for (let i = 0; i < 5; i++) {
+      const memberIndex = (currentIndex + i - 2 + teamMembers.length) % teamMembers.length;
+      visibleMembers.push({
+        ...teamMembers[memberIndex],
+        position: positions[i],
+        key: `${memberIndex}-${currentIndex}`
+      });
+    }
+    
+    return visibleMembers;
+  };
   
   return (
     <section className="py-20 px-6 max-w-7xl mx-auto bg-gray-50">
@@ -61,15 +96,15 @@ const TeamSection = () => {
         </p>
       </div>
       
-      <div className="flex justify-center items-center gap-8 mb-12">
-        {visibleMembers.map((member, index) => (
-          <TeamMemberCard key={`${member.name}-${currentIndex + index}`} {...member} />
+      <div className="flex justify-center items-center gap-4 mb-12 overflow-hidden">
+        {getVisibleMembers().map((member) => (
+          <TeamMemberCard key={member.key} {...member} />
         ))}
       </div>
 
       {/* Navigation Dots */}
       <div className="flex justify-center gap-3">
-        {Array.from({ length: Math.max(0, teamMembers.length - 2) }).map((_, index) => (
+        {teamMembers.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
