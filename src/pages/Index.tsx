@@ -1,8 +1,10 @@
+
 import Hero from "@/components/Hero";
 import NewsletterSection from "@/components/NewsletterSection";
 import Footer from "@/components/Footer";
 import TechStack from "@/components/Tech";
 import TeamSection from "@/components/TeamSection";
+import ModulesSection from "@/components/ModulesSection";
 
 const Index = () => {
   return (
@@ -83,6 +85,9 @@ const Index = () => {
       </section>
 
       <TeamSection />
+
+      {/* Modules Section with Sticky Scroll */}
+      <ModulesSection />
 
       <TechStack />
 
