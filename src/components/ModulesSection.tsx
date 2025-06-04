@@ -38,8 +38,9 @@ const modules = [
 
 const ModulesSection = () => {
   const [activeModule, setActiveModule] = useState(0);
+  const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('down');
   const containerRef = useRef<HTMLDivElement>(null);
-  const moduleRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,6 +50,11 @@ const ModulesSection = () => {
       const containerRect = container.getBoundingClientRect();
       const containerTop = containerRect.top;
       const containerHeight = containerRect.height;
+
+      // Determine scroll direction
+      const currentScrollY = window.scrollY;
+      setScrollDirection(currentScrollY > lastScrollY.current ? 'down' : 'up');
+      lastScrollY.current = currentScrollY;
 
       // Check if the container is in view
       if (containerTop <= 0 && containerTop + containerHeight > window.innerHeight) {
@@ -74,61 +80,71 @@ const ModulesSection = () => {
       className="relative"
       style={{ height: `${modules.length * 100}vh` }}
     >
-      <div className="sticky top-0 h-screen flex items-center">
+      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
             {/* Left Content */}
-            <div className="space-y-8">
-              <div className="space-y-4">
-                <p className="text-primary font-semibold uppercase tracking-wide text-sm">
-                  {modules[activeModule].subtitle}
-                </p>
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                  {modules[activeModule].title}
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {modules[activeModule].description}
-                </p>
-              </div>
-
-              {/* Features */}
-              <div className="flex gap-4">
-                {modules[activeModule].features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className="px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm"
-                  >
-                    <span className="text-sm font-medium text-gray-700">{feature}</span>
+            <div className="space-y-8 relative">
+              {modules.map((module, index) => (
+                <div
+                  key={module.id}
+                  className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                    index === activeModule 
+                      ? 'opacity-100 transform translate-y-0 scale-100' 
+                      : index < activeModule
+                        ? `opacity-0 transform ${scrollDirection === 'down' ? '-translate-y-8' : 'translate-y-8'} scale-95`
+                        : `opacity-0 transform ${scrollDirection === 'down' ? 'translate-y-8' : '-translate-y-8'} scale-95`
+                  }`}
+                >
+                  <div className="space-y-4">
+                    <p className="text-primary font-semibold uppercase tracking-wide text-sm">
+                      {module.subtitle}
+                    </p>
+                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                      {module.title}
+                    </h2>
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                      {module.description}
+                    </p>
                   </div>
-                ))}
-              </div>
 
-              {/* Module Navigation Dots */}
-              <div className="flex gap-3 pt-8">
-                {modules.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                      index === activeModule ? 'bg-primary' : 'bg-gray-300'
-                    }`}
-                    onClick={() => {
-                      const targetScroll = (index * window.innerHeight * modules.length) / modules.length;
-                      window.scrollTo({ top: targetScroll, behavior: 'smooth' });
-                    }}
-                  />
-                ))}
-              </div>
+                  {/* Features */}
+                  <div className="flex gap-4 pt-8">
+                    {module.features.map((feature, featureIndex) => (
+                      <div
+                        key={featureIndex}
+                        className="px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm"
+                      >
+                        <span className="text-sm font-medium text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
 
             {/* Right Image */}
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                <img
-                  src={modules[activeModule].image}
-                  alt={modules[activeModule].title}
-                  className="w-full h-full object-cover transition-opacity duration-500"
-                />
-              </div>
+              {modules.map((module, index) => (
+                <div
+                  key={module.id}
+                  className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                    index === activeModule 
+                      ? 'opacity-100 transform translate-y-0 scale-100' 
+                      : index < activeModule
+                        ? `opacity-0 transform ${scrollDirection === 'down' ? '-translate-y-12' : 'translate-y-12'} scale-90`
+                        : `opacity-0 transform ${scrollDirection === 'down' ? 'translate-y-12' : '-translate-y-12'} scale-90`
+                  }`}
+                >
+                  <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                    <img
+                      src={module.image}
+                      alt={module.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              ))}
               
               {/* Decorative elements */}
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-full"></div>
