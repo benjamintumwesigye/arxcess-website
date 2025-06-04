@@ -85,11 +85,11 @@ const ModulesSection = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-center h-full">
             {/* Left Content */}
             <div className="space-y-8 relative flex items-center justify-center">
-              <div className="w-full">
+              <div className="w-full border border-gray-200 rounded-2xl p-8 bg-white/50 backdrop-blur-sm">
                 {modules.map((module, index) => (
                   <div
                     key={module.id}
-                    className={`absolute inset-0 transition-all duration-700 ease-in-out flex items-center justify-center ${
+                    className={`absolute inset-8 transition-all duration-700 ease-in-out flex items-center justify-center ${
                       index === activeModule 
                         ? 'opacity-100 transform translate-y-0 scale-100' 
                         : index < activeModule
@@ -127,7 +127,7 @@ const ModulesSection = () => {
 
             {/* Right Image */}
             <div className="relative flex items-center justify-center">
-              <div className="relative w-full max-w-lg flex items-center justify-center">
+              <div className="relative w-full max-w-lg flex items-center justify-center border border-gray-200 rounded-2xl p-6 bg-white/50 backdrop-blur-sm">
                 {modules.map((module, index) => (
                   <div
                     key={module.id}
