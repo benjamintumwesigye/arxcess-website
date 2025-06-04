@@ -80,75 +80,79 @@ const ModulesSection = () => {
       className="relative"
       style={{ height: `${modules.length * 100}vh` }}
     >
-      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center justify-center h-full">
             {/* Left Content */}
-            <div className="space-y-8 relative">
-              {modules.map((module, index) => (
-                <div
-                  key={module.id}
-                  className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                    index === activeModule 
-                      ? 'opacity-100 transform translate-y-0 scale-100' 
-                      : index < activeModule
-                        ? `opacity-0 transform ${scrollDirection === 'down' ? '-translate-y-8' : 'translate-y-8'} scale-95`
-                        : `opacity-0 transform ${scrollDirection === 'down' ? 'translate-y-8' : '-translate-y-8'} scale-95`
-                  }`}
-                >
-                  <div className="space-y-4">
-                    <p className="text-primary font-semibold uppercase tracking-wide text-sm">
-                      {module.subtitle}
-                    </p>
-                    <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                      {module.title}
-                    </h2>
-                    <p className="text-lg text-gray-600 leading-relaxed">
-                      {module.description}
-                    </p>
-                  </div>
+            <div className="space-y-8 relative flex items-center justify-center">
+              <div className="w-full">
+                {modules.map((module, index) => (
+                  <div
+                    key={module.id}
+                    className={`absolute inset-0 transition-all duration-700 ease-in-out flex items-center justify-center ${
+                      index === activeModule 
+                        ? 'opacity-100 transform translate-y-0 scale-100' 
+                        : index < activeModule
+                          ? `opacity-0 transform ${scrollDirection === 'down' ? '-translate-y-8' : 'translate-y-8'} scale-95`
+                          : `opacity-0 transform ${scrollDirection === 'down' ? 'translate-y-8' : '-translate-y-8'} scale-95`
+                    }`}
+                  >
+                    <div className="space-y-4 text-center lg:text-left">
+                      <p className="text-primary font-semibold uppercase tracking-wide text-sm">
+                        {module.subtitle}
+                      </p>
+                      <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                        {module.title}
+                      </h2>
+                      <p className="text-lg text-gray-600 leading-relaxed">
+                        {module.description}
+                      </p>
 
-                  {/* Features */}
-                  <div className="flex gap-4 pt-8">
-                    {module.features.map((feature, featureIndex) => (
-                      <div
-                        key={featureIndex}
-                        className="px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm"
-                      >
-                        <span className="text-sm font-medium text-gray-700">{feature}</span>
+                      {/* Features */}
+                      <div className="flex gap-4 pt-8 justify-center lg:justify-start">
+                        {module.features.map((feature, featureIndex) => (
+                          <div
+                            key={featureIndex}
+                            className="px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm"
+                          >
+                            <span className="text-sm font-medium text-gray-700">{feature}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
             {/* Right Image */}
-            <div className="relative">
-              {modules.map((module, index) => (
-                <div
-                  key={module.id}
-                  className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                    index === activeModule 
-                      ? 'opacity-100 transform translate-y-0 scale-100' 
-                      : index < activeModule
-                        ? `opacity-0 transform ${scrollDirection === 'down' ? '-translate-y-12' : 'translate-y-12'} scale-90`
-                        : `opacity-0 transform ${scrollDirection === 'down' ? 'translate-y-12' : '-translate-y-12'} scale-90`
-                  }`}
-                >
-                  <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-                    <img
-                      src={module.image}
-                      alt={module.title}
-                      className="w-full h-full object-cover"
-                    />
+            <div className="relative flex items-center justify-center">
+              <div className="relative w-full max-w-lg">
+                {modules.map((module, index) => (
+                  <div
+                    key={module.id}
+                    className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                      index === activeModule 
+                        ? 'opacity-100 transform translate-y-0 scale-100' 
+                        : index < activeModule
+                          ? `opacity-0 transform ${scrollDirection === 'down' ? '-translate-y-12' : 'translate-y-12'} scale-90`
+                          : `opacity-0 transform ${scrollDirection === 'down' ? 'translate-y-12' : '-translate-y-12'} scale-90`
+                    }`}
+                  >
+                    <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                      <img
+                        src={module.image}
+                        alt={module.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
-              
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-full"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/5 rounded-full"></div>
+                ))}
+                
+                {/* Decorative elements */}
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-primary/10 rounded-full"></div>
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/5 rounded-full"></div>
+              </div>
             </div>
           </div>
         </div>
