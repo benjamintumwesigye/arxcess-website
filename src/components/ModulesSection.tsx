@@ -127,11 +127,11 @@ const ModulesSection = () => {
 
             {/* Right Image */}
             <div className="relative flex items-center justify-center">
-              <div className="relative w-full max-w-lg">
+              <div className="relative w-full max-w-lg flex items-center justify-center">
                 {modules.map((module, index) => (
                   <div
                     key={module.id}
-                    className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                    className={`absolute transition-all duration-700 ease-in-out ${
                       index === activeModule 
                         ? 'opacity-100 transform translate-y-0 scale-100' 
                         : index < activeModule
@@ -139,7 +139,7 @@ const ModulesSection = () => {
                           : `opacity-0 transform ${scrollDirection === 'down' ? 'translate-y-12' : '-translate-y-12'} scale-90`
                     }`}
                   >
-                    <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+                    <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl w-full flex items-center justify-center">
                       <img
                         src={module.image}
                         alt={module.title}
