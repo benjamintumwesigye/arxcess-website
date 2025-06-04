@@ -11,7 +11,7 @@ const cardMotion = {
 
 const TechStack = () => {
     return (
-        <div
+        <section
             className="min-h-screen bg-gradient-to-b to-black p-8 relative overflow-hidden"
             style={{ backgroundImage: 'linear-gradient(to bottom, #270b3d, #000)' }}
         >
@@ -174,7 +174,7 @@ const TechStack = () => {
                     </motion.div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

@@ -12,7 +12,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="relative min-h-[800px] py-20">
+    <section className="relative min-h-screen py-20 md:min-h-[750px]">
       <div className="container mx-auto px-6">
         <div className="h-auto absolute bottom-0 md:bottom-[-100px] mb-10 left-1/2 transform -translate-x-1/2 translate-y-1/6 z-10 w-full max-w-6xl px-6">
           {/* Newsletter Signup */}
@@ -64,7 +64,7 @@ const NewsletterSection = () => {
               </div>
 
               {/* Dotted Globe Illustration */}
-              <div className="relative">
+              <div className="relative hidden md:block ">
                 <div className="w-80 h-80 mx-auto relative">
                   {/* Circular border */}
                   <div className="absolute inset-0 border-2 border-primary/30 rounded-full"></div>
