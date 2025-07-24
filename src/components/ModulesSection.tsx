@@ -78,7 +78,7 @@ const ModulesSection = () => {
     <section 
       ref={containerRef}
       className="relative"
-      style={{ height: `${modules.length * 100}vh` }}
+      style={{ height: `${modules.length * 100}vh`, backgroundColor: '#f7f9fc' }}
     >
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 w-full">
@@ -113,7 +113,7 @@ const ModulesSection = () => {
                         {module.features.map((feature, featureIndex) => (
                           <div
                             key={featureIndex}
-                            className="px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm"
+                            className="px-4 py-2 bg-white rounded-lg shadow-sm"
                           >
                             <span className="text-sm font-medium text-gray-700">{feature}</span>
                           </div>

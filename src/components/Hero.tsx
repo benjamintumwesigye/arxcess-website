@@ -20,13 +20,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="font-chirp relative min-h-screen bg-gradient-to-br from-hero-dark via-hero-dark-light to-black overflow-hidden flex items-center">
+    <section className="hero font-chirp relative min-h-screen bg-gradient-to-br from-hero-dark via-hero-dark-light to-black overflow-hidden flex items-center">
       {/* Starburst Background - Step 4: Integration */}
       <StarburstBackground />
+      <img src="https://cdn.prod.website-files.com/6846e0f69b48bd33083ccf30/6847051fca9d03f2175253ef_Grid%20(1).webp" loading="lazy" width="2874" alt="" className="absolute grid-pattern"></img>
       
       {/* Navigation - with scroll-activated background */}
       <nav className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
-        scrolled ? 'backdrop-blur-md bg-black/30 border-b border-primary/10' : 'bg-transparent'
+        scrolled ? 'backdrop-blur-md bg-[rgb(0 0 0 / 0%)] border-b border-primary/10' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between p-6">
           <div className="flex items-center space-x-2">
@@ -36,12 +37,29 @@ const Hero = () => {
             <span className="text-white font-semibold text-xl">Arxcess</span>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Navigation Links */}
+          <div className="flex space-x-4">
+            <a href="#home" className="text-white bg-blue-700 hover:bg-blue-600 rounded-full px-6 py-2 transition duration-300">Home</a>
+            <a href="#about" className="text-white bg-blue-700 hover:bg-blue-600 rounded-full px-6 py-2 transition duration-300">About</a>
+            <a href="#project" className="text-white bg-blue-700 hover:bg-blue-600 rounded-full px-6 py-2 transition duration-300">Project</a>
+            <div className="relative group">
+              <a href="#pages" className="text-white bg-blue-700 hover:bg-blue-600 rounded-full px-6 py-2 transition duration-300 flex items-center">
+                Pages <span className="ml-1">▼</span>
+              </a>
+              {/* Dropdown (hidden by default, shown on hover) */}
+              <div className="absolute hidden group-hover:block bg-blue-700 mt-2 rounded-lg shadow-lg">
+                <a href="#page1" className="block px-4 py-2 text-white hover:bg-blue-600 rounded-lg">Page 1</a>
+                <a href="#page2" className="block px-4 py-2 text-white hover:bg-blue-600 rounded-lg">Page 2</a>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="hidden md:flex items-center space-x-8">
             <a href="#" className="text-gray-300 hover:text-white transition-colors">Home</a>
             <a href="#" className="text-gray-300 hover:text-white transition-colors">Features</a>
             <a href="#" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
             <a href="#" className="text-gray-300 hover:text-white transition-colors">Contact</a>
-          </div>
+          </div> */}
           
           <Button 
             className="bg-primary text-white hover:bg-primary/80 transition-all duration-300 font-semibold px-6"

@@ -1,13 +1,12 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Chirp';
-  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  font-family: "Chirp";
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -109,5 +108,19 @@
   body {
     @apply bg-background text-foreground font-chirp;
   }
-  
+  /* .hero {
+    background-image: url(https://cdn.prod.website-files.com/6846e0f69b48bd33083ccf30/6847047fca9d03f2175253ef_hero-3.webp);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: 1500px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 90px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  } */
 }
