@@ -29,7 +29,7 @@ const Hero = () => {
       
       {/* Navigation - with scroll-activated background */}
       <nav className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
-        scrolled ? 'backdrop-blur-md bg-[rgb(0 0 0 / 0%)] border-b border-primary/10' : 'bg-transparent'
+        scrolled ? 'bg-[#ddd0]' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between p-6">
           <div className="flex items-center space-x-2">
@@ -40,10 +40,10 @@ const Hero = () => {
           </div>
           
           {/* Navigation Links */}
-          <div className="hidden md:flex bg-white/10 backdrop-blur-sm rounded-full px-2 py-2 flex space-x-1">
-            <a href="#home" className="text-white bg-white/20 hover:bg-white/30 rounded-full px-6 py-2 transition duration-300 font-medium">Home</a>
-            <a href="#about" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 font-medium">About</a>
-            <a href="#project" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 font-medium">Project</a>
+          <div className="hidden md:flex bg-[#0000004d] backdrop-blur-sm rounded-full px-[11px] py-[9px] flex space-x-1">
+            <a href="#home" className="text-white bg-white/20 hover:bg-white/30 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Home</a>
+            <a href="#about" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">About</a>
+            <a href="#project" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Project</a>
             <div className="relative group">
               <a href="#pages" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 flex items-center font-medium">
                 Pages <span className="ml-1">▼</span>
@@ -59,13 +59,6 @@ const Hero = () => {
               </div>
             </div>
           </div>
-
-          {/* <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Home</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Features</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors">Contact</a>
-          </div> */}
           
           {/* Desktop Contact Button */}
           <Button 
