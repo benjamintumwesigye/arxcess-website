@@ -1,6 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Menu } from 'lucide-react';
 import StarburstBackground from './StarburstBackground';
 
 const Hero = () => {
@@ -65,11 +67,58 @@ const Hero = () => {
             <a href="#" className="text-gray-300 hover:text-white transition-colors">Contact</a>
           </div> */}
           
+          {/* Desktop Contact Button */}
           <Button 
             className="hidden md:flex bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-semibold px-6 py-2 rounded-full uppercase text-sm tracking-wider"
           >
             CONTACT US
           </Button>
+          
+          {/* Mobile Menu */}
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button
+                variant="ghost"
+                size="icon"
+                className="md:hidden text-white hover:bg-white/10"
+              >
+                <Menu className="h-6 w-6" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-gray-900/95 backdrop-blur-md border-gray-800">
+              <div className="flex flex-col space-y-6 mt-8">
+                <a href="#home" className="text-white text-lg font-medium hover:text-primary transition-colors">
+                  Home
+                </a>
+                <a href="#about" className="text-white text-lg font-medium hover:text-primary transition-colors">
+                  About
+                </a>
+                <a href="#project" className="text-white text-lg font-medium hover:text-primary transition-colors">
+                  Project
+                </a>
+                <div className="space-y-4">
+                  <span className="text-white text-lg font-medium">Pages</span>
+                  <div className="pl-4 space-y-3">
+                    <a href="#news" className="block text-gray-300 hover:text-white transition-colors">
+                      News
+                    </a>
+                    <a href="#style-guide" className="block text-gray-300 hover:text-white transition-colors">
+                      Style Guide
+                    </a>
+                    <a href="#licensing" className="block text-gray-300 hover:text-white transition-colors">
+                      Licensing
+                    </a>
+                    <a href="#changelog" className="block text-gray-300 hover:text-white transition-colors">
+                      Changelog
+                    </a>
+                  </div>
+                </div>
+                <Button className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-semibold px-6 py-3 rounded-full uppercase text-sm tracking-wider mt-6">
+                  CONTACT US
+                </Button>
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </nav>
 
