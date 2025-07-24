@@ -38,7 +38,7 @@ const Hero = () => {
           </div>
           
           {/* Navigation Links */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-full px-2 py-2 flex space-x-1">
+          <div className="hidden md:flex bg-white/10 backdrop-blur-sm rounded-full px-2 py-2 flex space-x-1">
             <a href="#home" className="text-white bg-white/20 hover:bg-white/30 rounded-full px-6 py-2 transition duration-300 font-medium">Home</a>
             <a href="#about" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 font-medium">About</a>
             <a href="#project" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 font-medium">Project</a>
@@ -47,7 +47,7 @@ const Hero = () => {
                 Pages <span className="ml-1">▼</span>
               </a>
               {/* Dropdown (hidden by default, shown on hover) */}
-              <div className="absolute hidden group-hover:block group-focus-within:block bg-gray-900/90 backdrop-blur-sm mt-0 pt-2 rounded-xl shadow-2xl min-w-[180px] z-50">
+              <div className="absolute hidden group-hover:block group-focus-within:block bg-gray-900/40 backdrop-blur-sm mt-0 pt-2 rounded-xl shadow-2xl min-w-[180px] z-50">
                 <div className="bg-gray-900/90 backdrop-blur-sm rounded-xl py-2">
                   <a href="#news" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors">News</a>
                   <a href="#style-guide" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors">Style Guide</a>
@@ -66,7 +66,7 @@ const Hero = () => {
           </div> */}
           
           <Button 
-            className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-semibold px-6 py-2 rounded-full uppercase text-sm tracking-wider"
+            className="hidden md:flex bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-semibold px-6 py-2 rounded-full uppercase text-sm tracking-wider"
           >
             CONTACT US
           </Button>
