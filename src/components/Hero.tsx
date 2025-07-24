@@ -47,11 +47,13 @@ const Hero = () => {
                 Pages <span className="ml-1">▼</span>
               </a>
               {/* Dropdown (hidden by default, shown on hover) */}
-              <div className="absolute hidden group-hover:block bg-gray-900 mt-1 rounded-xl shadow-2xl min-w-[180px] z-50 py-2 hover:block">
-                <a href="#news" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">News</a>
-                <a href="#style-guide" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">Style Guide</a>
-                <a href="#licensing" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">Licensing</a>
-                <a href="#changelog" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">Changelog</a>
+              <div className="absolute hidden group-hover:block group-focus-within:block bg-gray-900 mt-0 pt-2 rounded-xl shadow-2xl min-w-[180px] z-50">
+                <div className="bg-gray-900 rounded-xl py-2">
+                  <a href="#news" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">News</a>
+                  <a href="#style-guide" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">Style Guide</a>
+                  <a href="#licensing" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">Licensing</a>
+                  <a href="#changelog" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800 transition-colors">Changelog</a>
+                </div>
               </div>
             </div>
           </div>
