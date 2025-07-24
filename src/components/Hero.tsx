@@ -38,18 +38,18 @@ const Hero = () => {
           </div>
           
           {/* Navigation Links */}
-          <div className="flex space-x-4">
-            <a href="#home" className="text-white bg-blue-700 hover:bg-blue-600 rounded-full px-6 py-2 transition duration-300">Home</a>
-            <a href="#about" className="text-white bg-blue-700 hover:bg-blue-600 rounded-full px-6 py-2 transition duration-300">About</a>
-            <a href="#project" className="text-white bg-blue-700 hover:bg-blue-600 rounded-full px-6 py-2 transition duration-300">Project</a>
+          <div className="flex space-x-2">
+            <a href="#home" className="text-black bg-white hover:bg-gray-100 rounded-full px-6 py-2 transition duration-300 font-medium">Home</a>
+            <a href="#about" className="text-gray-600 hover:text-black hover:bg-white/10 rounded-full px-6 py-2 transition duration-300 font-medium">About</a>
+            <a href="#project" className="text-gray-600 hover:text-black hover:bg-white/10 rounded-full px-6 py-2 transition duration-300 font-medium">Project</a>
             <div className="relative group">
-              <a href="#pages" className="text-white bg-blue-700 hover:bg-blue-600 rounded-full px-6 py-2 transition duration-300 flex items-center">
+              <a href="#pages" className="text-gray-600 hover:text-black hover:bg-white/10 rounded-full px-6 py-2 transition duration-300 flex items-center font-medium">
                 Pages <span className="ml-1">▼</span>
               </a>
               {/* Dropdown (hidden by default, shown on hover) */}
-              <div className="absolute hidden group-hover:block bg-blue-700 mt-2 rounded-lg shadow-lg">
-                <a href="#page1" className="block px-4 py-2 text-white hover:bg-blue-600 rounded-lg">Page 1</a>
-                <a href="#page2" className="block px-4 py-2 text-white hover:bg-blue-600 rounded-lg">Page 2</a>
+              <div className="absolute hidden group-hover:block bg-white mt-2 rounded-lg shadow-lg min-w-[120px]">
+                <a href="#page1" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Page 1</a>
+                <a href="#page2" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg">Page 2</a>
               </div>
             </div>
           </div>
@@ -62,9 +62,9 @@ const Hero = () => {
           </div> */}
           
           <Button 
-            className="bg-primary text-white hover:bg-primary/80 transition-all duration-300 font-semibold px-6"
+            className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-semibold px-6 py-2 rounded-full uppercase text-sm tracking-wider"
           >
-            Get Started
+            CONTACT US
           </Button>
         </div>
       </nav>
