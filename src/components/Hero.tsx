@@ -38,12 +38,12 @@ const Hero = () => {
           </div>
           
           {/* Navigation Links */}
-          <div className="flex space-x-2">
-            <a href="#home" className="text-black bg-white hover:bg-gray-100 rounded-full px-6 py-2 transition duration-300 font-medium">Home</a>
-            <a href="#about" className="text-gray-600 hover:text-black hover:bg-white/10 rounded-full px-6 py-2 transition duration-300 font-medium">About</a>
-            <a href="#project" className="text-gray-600 hover:text-black hover:bg-white/10 rounded-full px-6 py-2 transition duration-300 font-medium">Project</a>
+          <div className="bg-white/10 backdrop-blur-sm rounded-full px-2 py-2 flex space-x-1">
+            <a href="#home" className="text-white bg-white/20 hover:bg-white/30 rounded-full px-6 py-2 transition duration-300 font-medium">Home</a>
+            <a href="#about" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 font-medium">About</a>
+            <a href="#project" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 font-medium">Project</a>
             <div className="relative group">
-              <a href="#pages" className="text-gray-600 hover:text-black hover:bg-white/10 rounded-full px-6 py-2 transition duration-300 flex items-center font-medium">
+              <a href="#pages" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 flex items-center font-medium">
                 Pages <span className="ml-1">▼</span>
               </a>
               {/* Dropdown (hidden by default, shown on hover) */}
