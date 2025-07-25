@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import TechStack from "@/components/Tech";
 import TeamSection from "@/components/TeamSection";
 import ModulesSection from "@/components/ModulesSection";
+import FAQSection from "@/components/FAQSection";
 
 const Index = () => {
   return (
@@ -90,6 +91,9 @@ const Index = () => {
       <ModulesSection />
 
       <TechStack />
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       {/* Newsletter Section */}
       <NewsletterSection />
