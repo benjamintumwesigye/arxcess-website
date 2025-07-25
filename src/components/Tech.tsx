@@ -13,7 +13,12 @@ const TechStack = () => {
     return (
         <section
             className="min-h-screen bg-gradient-to-b to-black p-8 relative overflow-hidden"
-            style={{ backgroundImage: 'linear-gradient(to bottom, #270b3d, #000)' }}
+            style={{ 
+                backgroundImage: 'url(/hero-5.webp), linear-gradient(to bottom, #270b3d, #000)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundBlendMode: 'overlay'
+            }}
         >
             {/* More concentrated, intense radial purple glow overlay */}
             <div className="pointer-events-none absolute left-1/2 top-0 z-0 h-[350px] w-[500px] -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-400/70 via-purple-700/10 to-transparent"></div>
