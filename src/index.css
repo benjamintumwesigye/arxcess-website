@@ -14,6 +14,7 @@
 
 @layer base {
   :root {
+    --first-color: #ffffff;
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -126,7 +127,7 @@
 }
 
 .other-font {
-    background-image: linear-gradient(279deg, #ffffff1a, var(--primary));
+    background-image: linear-gradient(279deg, #ffffff1a, var(--first-color));
     letter-spacing: -1px;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
