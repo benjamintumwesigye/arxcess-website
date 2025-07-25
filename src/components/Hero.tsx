@@ -145,7 +145,7 @@ const Hero = () => {
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in-up">
+            <p className="text-xl md:text-2xl text-gray-300 my-8 animate-fade-in-up">
               Leveraging cutting-edge tools, we transform simple ideas into complex, business-ready software—custom-built or subscription-based.
             </p>
 
