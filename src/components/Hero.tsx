@@ -7,14 +7,14 @@ import StarburstBackground from './StarburstBackground';
 
 const Hero = () => {
   const [scrolled, setScrolled] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       // Apply background when scrolled more than 5% of viewport height
       const scrollThreshold = window.innerHeight * 0.05;
       setScrolled(window.scrollY > scrollThreshold);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -26,11 +26,10 @@ const Hero = () => {
       {/* Starburst Background - Step 4: Integration */}
       <StarburstBackground />
       <img src="https://cdn.prod.website-files.com/6846e0f69b48bd33083ccf30/6847051fca9d03f2175253ef_Grid%20(1).webp" loading="lazy" width="2874" alt="" className="absolute grid-pattern"></img>
-      
+
       {/* Navigation - with scroll-activated background */}
-      <nav className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
-        scrolled ? 'bg-[#a8a6a6ad]' : 'bg-transparent'
-      }`}>
+      <nav className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${scrolled ? 'bg-[#a8a6a6ad]' : 'bg-transparent'
+        }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between p-6">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
@@ -38,7 +37,7 @@ const Hero = () => {
             </div>
             <span className="text-white font-semibold text-xl">Arxcess</span>
           </div>
-          
+
           {/* Navigation Links */}
           <div className="hidden md:flex bg-[#0000004d] backdrop-blur-sm rounded-full px-[11px] py-[9px] flex space-x-1">
             <a href="#home" className="text-white bg-white/20 hover:bg-white/30 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Home</a>
@@ -59,14 +58,14 @@ const Hero = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Desktop Contact Button */}
-          <Button 
+          <Button
             className="hidden md:flex bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-semibold px-6 py-2 rounded-full uppercase text-sm tracking-wider"
           >
             CONTACT US
           </Button>
-          
+
           {/* Mobile Menu */}
           <Sheet>
             <SheetTrigger asChild>
@@ -126,27 +125,18 @@ const Hero = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 
-              className="text-white animate-fade-in-up"
-              style={{ 
-                textWrap: 'balance',
-                letterSpacing: '-1px',
-                marginTop: 0,
-                marginBottom: 0,
-                fontSize: '70px',
-                fontWeight: 500,
-                lineHeight: 1
-              }}
+            <h1
+              className="text-white display-font animate-fade-in-up"
             >
-              Transform Your Business with{' '}
+              We Build Custom Software for the {' '}
               <span className="other-font">
-                Custom Software
+                Future Of Business
               </span>
             </h1>
 
             {/* Subtitle */}
-            <p className="text-xl md:text-2xl text-gray-300 my-8 animate-fade-in-up">
-              Leveraging cutting-edge tools, we transform simple ideas into complex, business-ready software—custom-built or subscription-based.
+            <p className="text-xl md:text-2xl text-gray-100 my-8 animate-fade-in-up">
+              From custom web applications to advanced mobile solutions, we develop the tools that help business adapt and grow <span className="other-font">faster</span> 
             </p>
 
             {/* Feature badges */}
@@ -167,15 +157,15 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up mb-12">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-primary text-white hover:bg-primary/80 transition-all duration-300 font-semibold text-lg px-8 py-4"
               >
                 Start Your Journey
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
+              <Button
+                size="lg"
+                variant="outline"
                 className="border-gray-600 text-white hover:bg-white/10 transition-all duration-300 font-semibold text-lg px-8 py-4"
               >
                 Learn More
@@ -205,35 +195,35 @@ const Hero = () => {
             <div className="grid grid-cols-2 gap-3 h-[450px]">
               {/* Large featured image */}
               <div className="col-span-2 row-span-2 relative group overflow-hidden rounded-2xl shadow-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=600" 
+                <img
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=600"
                   alt="Person using MacBook Pro - representing custom software development"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-primary/10"></div>
               </div>
-              
+
               {/* Top right image */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&h=300" 
+                <img
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&h=300"
                   alt="Macro photography of black circuit board - Technical expertise"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-primary/10"></div>
               </div>
-              
+
               {/* Bottom right image */}
               <div className="relative group overflow-hidden rounded-2xl shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=400&h=300" 
+                <img
+                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=400&h=300"
                   alt="Turned on gray laptop computer - Modern solutions"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-primary/10"></div>
               </div>
             </div>
-            
+
             {/* Floating elements for visual interest */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary/20 rounded-full blur-xl animate-glow-pulse"></div>
             <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary/30 rounded-full blur-lg animate-glow-pulse" style={{ animationDelay: '2s' }}></div>

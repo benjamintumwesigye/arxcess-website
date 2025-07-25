@@ -109,32 +109,55 @@
   body {
     @apply bg-background text-foreground font-chirp;
   }
-  /* .hero {
-    background-image: url(https://cdn.prod.website-files.com/6846e0f69b48bd33083ccf30/6847047fca9d03f2175253ef_hero-3.webp);
-    background-position: 50% 0;
-    background-repeat: no-repeat;
-    background-size: 1500px;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding-bottom: 90px;
-    padding-left: 5%;
-    padding-right: 5%;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-  } */
+}
+
+p {
+    opacity: .8;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.display-font {
+  letter-spacing: -1px;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 1;
+  
 }
 
 .other-font {
-    background-image: linear-gradient(279deg, #ffffff1a, var(--first-color));
-    letter-spacing: -1px;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    padding-right: 10px;
-    font-family: 'Playfair Display', sans-serif;
-    font-style: italic;
-    font-weight: 400;
-    position: relative;
+  background-image: linear-gradient(279deg, #ffffff1a, var(--first-color));
+  letter-spacing: -1px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding-right: 10px;
+  font-family: "Playfair Display", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  position: relative;
+}
+
+.other-font-faq {
+  background-image: linear-gradient(279deg, #0003, black);
+  letter-spacing: -1px;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  padding-right: 10px;
+  font-family: "Playfair Display", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  position: relative;
+}
+
+
+.section-stack-bg {
+    background-image: url(https://cdn.prod.website-files.com/6846e0f…/684ab7e…_hero-5.webp);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: contain;
 }

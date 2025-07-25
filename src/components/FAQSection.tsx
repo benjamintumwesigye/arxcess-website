@@ -34,19 +34,19 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-4xl mx-auto px-6">
+    <section className="bg-white py-20 p-8">
+      <div className="max-w-[77rem] mx-auto">
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Left side - Header and description */}
           <div className="lg:w-1/3">
             <div className="mb-6">
               <span className="text-sm text-gray-500 tracking-wider uppercase">[ FAQ ]</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
+            <h2 className="text-2xl display-font text-black mb-6" style={{fontSize: '47px', lineHeight: '1.1'}}>
               Frequently Asked{" "}
-              <span className="other-font">Questions</span>
+              <span className="other-font-faq">Questions</span>
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="my-8">
               Our team will walk you through our design approach, project details, and pricing
             </p>
             <button className="text-black font-semibold tracking-wider hover:opacity-70 transition-opacity">
