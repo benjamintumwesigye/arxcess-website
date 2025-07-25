@@ -17,7 +17,7 @@ const TechStack = () => {
                 backgroundImage: 'url(/hero-5.webp)',
                 backgroundPosition: '0 0',
                 backgroundRepeat: 'no-repeat',
-                backgroundSize: 'contain'
+                backgroundSize: 'cover'
             }}
         >
             <div className="max-w-7xl mx-auto px-6 relative z-10">
