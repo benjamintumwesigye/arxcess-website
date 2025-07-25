@@ -12,18 +12,14 @@ const cardMotion = {
 const TechStack = () => {
     return (
         <section
-            className="min-h-screen bg-gradient-to-b to-black p-8 relative overflow-hidden"
+            className="min-h-screen p-8 relative overflow-hidden"
             style={{ 
-                backgroundImage: 'url(/hero-5.webp), linear-gradient(to bottom, #270b3d, #000)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundBlendMode: 'overlay'
+                backgroundImage: 'url(/hero-5.webp)',
+                backgroundPosition: '0 0',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'contain'
             }}
         >
-            {/* More concentrated, intense radial purple glow overlay */}
-            <div className="pointer-events-none absolute left-1/2 top-0 z-0 h-[350px] w-[500px] -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-400/70 via-purple-700/10 to-transparent"></div>
-            {/* Subtle star/dot background */}
-            <div className="pointer-events-none absolute inset-0 z-0 bg-[url('/stars.svg')] opacity-40"></div>
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <h1 className="text-5xl font-bold mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-200 to-purple-400 drop-shadow-[0_2px_24px_rgba(168,85,247,0.5)] text-left">
                     Fueling your progress with <br /> leading edge technology
