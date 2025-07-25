@@ -127,8 +127,16 @@ const Hero = () => {
 
             {/* Main Heading */}
             <h1 
-              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in-up"
-              style={{ textWrap: 'balance' }}
+              className="text-white animate-fade-in-up"
+              style={{ 
+                textWrap: 'balance',
+                letterSpacing: '-1px',
+                marginTop: 0,
+                marginBottom: 0,
+                fontSize: '70px',
+                fontWeight: 500,
+                lineHeight: 1
+              }}
             >
               Transform Your Business with{' '}
               <span className="other-font">
