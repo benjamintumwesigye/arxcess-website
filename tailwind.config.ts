@@ -19,9 +19,9 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				'chirp': ['"Chirp"', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
-			},
+		fontFamily: {
+			'chirp': ['"Instrument Sans"', 'sans-serif'],
+		},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
