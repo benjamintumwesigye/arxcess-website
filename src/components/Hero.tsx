@@ -29,7 +29,7 @@ const Hero = () => {
       
       {/* Navigation - with scroll-activated background */}
       <nav className={`fixed top-0 left-0 right-0 z-30 transition-all duration-300 ${
-        scrolled ? 'bg-[#ddd0]' : 'bg-transparent'
+        scrolled ? 'bg-[#a8a6a6ad]' : 'bg-transparent'
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between p-6">
           <div className="flex items-center space-x-2">
