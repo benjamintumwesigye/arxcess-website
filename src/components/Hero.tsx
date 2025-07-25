@@ -131,7 +131,7 @@ const Hero = () => {
               style={{ textWrap: 'balance' }}
             >
               Transform Your Business with{' '}
-              <span className="bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
+              <span className="other-font">
                 Custom Software
               </span>
             </h1>
