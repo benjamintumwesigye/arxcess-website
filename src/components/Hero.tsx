@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import StarburstBackground from './StarburstBackground';
+import { ArrowRight , ArrowDown} from 'lucide-react';
 
 const Hero = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -89,7 +90,9 @@ const Hero = () => {
                   Project
                 </a>
                 <div className="space-y-4">
-                  <span className="text-white text-lg font-medium">Pages</span>
+                  <span className="text-white text-lg font-medium">Pages
+                    <ArrowDown></ArrowDown>
+                  </span>
                   <div className="pl-4 space-y-3">
                     <a href="#news" className="block text-gray-300 hover:text-white transition-colors">
                       News
@@ -158,17 +161,9 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up mb-12">
               <Button
-                size="lg"
-                className="bg-primary text-white hover:bg-primary/80 transition-all duration-300 font-semibold text-lg px-8 py-4"
+                className="hidden md:flex bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-semibold px-6 py-2 rounded-full uppercase text-sm tracking-wider"
               >
-                Start Your Journey
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-gray-600 text-white hover:bg-white/10 transition-all duration-300 font-semibold text-lg px-8 py-4"
-              >
-                Learn More
+                Start Your Journey <ArrowRight></ArrowRight>
               </Button>
             </div>
 

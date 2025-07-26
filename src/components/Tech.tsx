@@ -12,7 +12,7 @@ const cardMotion = {
 const TechStack = () => {
     return (
         <section
-            className="min-h-screen p-8 relative overflow-hidden"
+            className="py-[6rem] relative"
             style={{ 
                 backgroundImage: 'url(/hero-5.webp)',
                 backgroundPosition: '0 0',
@@ -20,9 +20,9 @@ const TechStack = () => {
                 backgroundSize: 'cover'
             }}
         >
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
-                <h1 className="text-5xl font-bold mb-16 bg-clip-text text-transparent bg-gradient-to-r from-purple-200 to-purple-400 drop-shadow-[0_2px_24px_rgba(168,85,247,0.5)] text-left">
-                    Fueling your progress with <br /> leading edge technology
+            <div className="max-w-7xl mx-auto px-6 relative">
+                <h1 className="text-5xl mb-16 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-400 drop-shadow-[0_2px_24px_rgba(168,85,247,0.5)] text-left">
+                    Fueling your progress with <br /> <span className='other-font'>Leading Technology</span>
                 </h1>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
@@ -33,7 +33,7 @@ const TechStack = () => {
                                 <CardTitle className="flex items-center gap-2">
                                     <span className="text-2xl">⚙️</span> Backend
                                 </CardTitle>
-                                <CardDescription className="text-gray-300">
+                                <CardDescription className="text-gray-100">
                                     Specializes in delivering robust and scalable backend solutions tailored to your business needs.
                                 </CardDescription>
                             </CardHeader>
@@ -64,7 +64,7 @@ const TechStack = () => {
                                 <CardTitle className="flex items-center gap-2">
                                     <span className="text-2xl">🎨</span> Frontend
                                 </CardTitle>
-                                <CardDescription className="text-gray-300">
+                                <CardDescription className="text-gray-100">
                                     Provides high-quality frontend development services that focus on creating fast, responsive, and user-friendly interfaces.
                                 </CardDescription>
                             </CardHeader>
@@ -94,7 +94,7 @@ const TechStack = () => {
                                 <CardTitle className="flex items-center gap-2">
                                     <span className="text-2xl">📱</span> Mobile
                                 </CardTitle>
-                                <CardDescription className="text-gray-300">
+                                <CardDescription className="text-gray-100">
                                     Offers expert mobile app development services for both iOS and Android platforms.
                                 </CardDescription>
                             </CardHeader>
@@ -124,7 +124,7 @@ const TechStack = () => {
                                 <CardTitle className="flex items-center gap-2">
                                     <span className="text-2xl">🗄️</span> Database
                                 </CardTitle>
-                                <CardDescription className="text-gray-300">
+                                <CardDescription className="text-gray-100">
                                     Provides reliable and scalable database solutions to support your application's performance and data integrity.
                                 </CardDescription>
                             </CardHeader>
@@ -151,7 +151,7 @@ const TechStack = () => {
                                 <CardTitle className="flex items-center gap-2">
                                     <span className="text-2xl">☁️</span> Cloud
                                 </CardTitle>
-                                <CardDescription className="text-gray-300">
+                                <CardDescription className="text-gray-100">
                                     Delivers secure and scalable cloud solutions to help businesses operate efficiently and grow with confidence.
                                 </CardDescription>
                             </CardHeader>
