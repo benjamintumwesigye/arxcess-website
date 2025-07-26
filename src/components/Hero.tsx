@@ -170,11 +170,6 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Client Logos */}
-            <div className="animate-fade-in-up">
-              <div className="text-gray-400 text-sm mb-4 text-center">Trusted by leading companies</div>
-              <ClientLogos />
-            </div>
           </div>
 
           {/* Right Column - Bento Grid Images (replacing single image) */}
@@ -217,6 +212,12 @@ const Hero = () => {
             <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary/30 rounded-full blur-lg animate-glow-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
         </div>
+      </div>
+
+      {/* Client Logos - Full Width */}
+      <div className="absolute bottom-20 left-0 right-0 z-10 animate-fade-in-up">
+        <div className="text-gray-400 text-sm mb-6 text-center">Trusted by leading companies</div>
+        <ClientLogos />
       </div>
 
       {/* Bottom gradient overlay */}
