@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import StarburstBackground from './StarburstBackground';
-import { ArrowRight , ArrowDown} from 'lucide-react';
+import { ArrowRight, ArrowDown, ArrowUp } from 'lucide-react';
 
 const Hero = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -45,8 +45,10 @@ const Hero = () => {
             <a href="#about" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">About</a>
             <a href="#project" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Project</a>
             <div className="relative group">
-              <a href="#pages" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 flex items-center font-medium">
-                Pages <span className="ml-1">▼</span>
+              <a href="#pages" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 flex items-center font-medium group">
+                Pages 
+                <ArrowDown className="ml-1 w-4 h-4 transition-transform duration-200 group-hover:hidden" />
+                <ArrowUp className="ml-1 w-4 h-4 transition-transform duration-200 hidden group-hover:block" />
               </a>
               {/* Dropdown (hidden by default, shown on hover) */}
               <div className="absolute hidden group-hover:block group-focus-within:block bg-gray-900/40 backdrop-blur-sm mt-0 pt-2 rounded-xl shadow-2xl min-w-[180px] z-50">
