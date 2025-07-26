@@ -162,7 +162,7 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up mb-12">
+            <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up mb-20">
               <Button
                 className="hidden md:flex bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-semibold px-6 py-2 rounded-full uppercase text-sm tracking-wider"
               >
@@ -215,8 +215,8 @@ const Hero = () => {
       </div>
 
       {/* Client Logos - Full Width */}
-      <div className="absolute bottom-20 left-0 right-0 z-10 animate-fade-in-up">
-        <div className="text-gray-400 text-sm mb-6 text-center">Trusted by leading companies</div>
+      <div className="absolute bottom-8 left-0 right-0 z-10 animate-fade-in-up">
+        <div className="text-gray-400 text-sm mb-4 text-center">Trusted by leading companies</div>
         <ClientLogos />
       </div>
 
