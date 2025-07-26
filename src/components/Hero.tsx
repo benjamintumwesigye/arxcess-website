@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import StarburstBackground from './StarburstBackground';
+import ClientLogos from './ClientLogos';
 import { ArrowRight, ArrowDown, ArrowUp } from 'lucide-react';
 
 const Hero = () => {
@@ -169,20 +170,10 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 animate-fade-in-up">
-              <div>
-                <div className="text-3xl font-bold text-white mb-2">99.9%</div>
-                <div className="text-gray-400">Uptime</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white mb-2">100+</div>
-                <div className="text-gray-400">Clients</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                <div className="text-gray-400">Support</div>
-              </div>
+            {/* Client Logos */}
+            <div className="animate-fade-in-up">
+              <div className="text-gray-400 text-sm mb-4 text-center">Trusted by leading companies</div>
+              <ClientLogos />
             </div>
           </div>
 

@@ -115,13 +115,21 @@ export default {
 						opacity: '0.6'
 					}
 				},
-				
+				'scroll-left': {
+					'0%': { 
+						transform: 'translateX(0)'
+					},
+					'100%': { 
+						transform: 'translateX(-100%)'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in-up': 'fade-in-up 0.8s ease-out',
-				'glow-pulse': 'glow-pulse 4s ease-in-out infinite'
+				'glow-pulse': 'glow-pulse 4s ease-in-out infinite',
+				'scroll-left': 'scroll-left 30s linear infinite'
 			},
 			backdropBlur: {
 				xs: '2px',
