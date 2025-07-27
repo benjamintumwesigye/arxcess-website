@@ -36,7 +36,7 @@ const FAQSection = () => {
   return (
     <section className="bg-white py-20 p-8">
       <div className="max-w-[77rem] mx-auto">
-        <div className="flex flex-col lg:flex-row gap-12">
+        <div className="flex flex-col lg:flex-row gap-20">
           {/* Left side - Header and description */}
           <div className="lg:w-1/3">
             <div className="mb-6">
