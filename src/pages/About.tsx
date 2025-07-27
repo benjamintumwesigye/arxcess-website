@@ -24,8 +24,10 @@ const About = () => {
             {/* Main Heading */}
             <div className="mb-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                From concept to{' '}
-                <span className="italic text-primary font-light">market leader</span>
+                From concept to
+              </h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl italic text-primary font-light leading-tight">
+                market leader
               </h1>
             </div>
             
