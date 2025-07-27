@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, ArrowDown, ArrowUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const HeroNavigation = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,8 +35,8 @@ const HeroNavigation = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex bg-[#0000004d] backdrop-blur-sm rounded-full px-[11px] py-[9px] flex space-x-1">
-          <Link to="/" className="text-white bg-white/20 hover:bg-white/30 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Home</Link>
-          <Link to="/about" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">About</Link>
+          <Link to="/" className={`text-white rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium ${location.pathname === '/' ? 'bg-white/20 hover:bg-white/30' : 'hover:bg-white/20'}`}>Home</Link>
+          <Link to="/about" className={`text-white rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium ${location.pathname === '/about' ? 'bg-white/20 hover:bg-white/30' : 'hover:bg-white/20'}`}>About</Link>
           <a href="#project" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Project</a>
           <div className="relative group">
             <a href="#pages" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 flex items-center font-medium group">
@@ -75,10 +76,10 @@ const HeroNavigation = () => {
           </SheetTrigger>
           <SheetContent side="right" className="bg-gray-900/95 backdrop-blur-md border-gray-800">
             <div className="flex flex-col space-y-6 mt-8">
-              <Link to="/" className="text-white text-lg font-medium hover:text-primary transition-colors">
+              <Link to="/" className={`text-lg font-medium transition-colors ${location.pathname === '/' ? 'text-primary' : 'text-white hover:text-primary'}`}>
                 Home
               </Link>
-              <Link to="/about" className="text-white text-lg font-medium hover:text-primary transition-colors">
+              <Link to="/about" className={`text-lg font-medium transition-colors ${location.pathname === '/about' ? 'text-primary' : 'text-white hover:text-primary'}`}>
                 About
               </Link>
               <a href="#project" className="text-white text-lg font-medium hover:text-primary transition-colors">
