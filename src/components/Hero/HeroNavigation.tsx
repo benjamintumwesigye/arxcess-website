@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, ArrowDown, ArrowUp } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroNavigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,8 +34,8 @@ const HeroNavigation = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex bg-[#0000004d] backdrop-blur-sm rounded-full px-[11px] py-[9px] flex space-x-1">
-          <a href="#home" className="text-white bg-white/20 hover:bg-white/30 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Home</a>
-          <a href="#about" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">About</a>
+          <Link to="/" className="text-white bg-white/20 hover:bg-white/30 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Home</Link>
+          <Link to="/about" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">About</Link>
           <a href="#project" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Project</a>
           <div className="relative group">
             <a href="#pages" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 flex items-center font-medium group">
@@ -74,12 +75,12 @@ const HeroNavigation = () => {
           </SheetTrigger>
           <SheetContent side="right" className="bg-gray-900/95 backdrop-blur-md border-gray-800">
             <div className="flex flex-col space-y-6 mt-8">
-              <a href="#home" className="text-white text-lg font-medium hover:text-primary transition-colors">
+              <Link to="/" className="text-white text-lg font-medium hover:text-primary transition-colors">
                 Home
-              </a>
-              <a href="#about" className="text-white text-lg font-medium hover:text-primary transition-colors">
+              </Link>
+              <Link to="/about" className="text-white text-lg font-medium hover:text-primary transition-colors">
                 About
-              </a>
+              </Link>
               <a href="#project" className="text-white text-lg font-medium hover:text-primary transition-colors">
                 Project
               </a>
