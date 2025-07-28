@@ -145,6 +145,58 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Why Choose Us Section */}
+      <section className="relative z-10 py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Section Title */}
+          <div className="text-center mb-16">
+            <span className="text-white text-sm font-medium tracking-wider">[ WHY CHOOSE US ]</span>
+          </div>
+          
+          {/* Main Quote */}
+          <div className="text-center max-w-5xl mx-auto mb-16">
+            <blockquote className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              "We mine the data, decode your audience,{' '}
+              <span className="italic font-light">and transform your brand's edge</span>{' '}
+              into tangible wins."
+            </blockquote>
+          </div>
+          
+          {/* Author */}
+          <div className="flex items-center justify-center gap-4 mb-20">
+            <div className="w-12 h-12 rounded-full overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80"
+                alt="David Doe"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="text-white text-sm tracking-wider">
+              DAVID DOE, MAXIMA FOUNDER
+            </div>
+          </div>
+          
+          {/* Bottom Section */}
+          <div className="text-center">
+            <div className="text-white text-sm font-medium tracking-wider mb-12">
+              [ EMPOWERING 100+ TOP BRANDS TO OUTPERFORM ]
+            </div>
+            
+            {/* Brand Logos */}
+            <div className="flex items-center justify-center gap-12 flex-wrap opacity-80">
+              <div className="text-white text-xl font-bold">Logoipsum</div>
+              <div className="text-white text-xl font-bold">Logoipsum</div>
+              <div className="text-white text-xl font-bold italic">Logoipsum</div>
+              <div className="text-white text-xl font-bold">Logoipsum</div>
+              <div className="text-white text-xl font-bold">Logoipsum</div>
+              <div className="text-white text-xl font-bold">Logoipsum</div>
+              <div className="text-white text-xl font-bold">Logoipsum</div>
+              <div className="text-white text-xl font-bold">Logoipsum</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
