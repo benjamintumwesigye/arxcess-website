@@ -100,6 +100,49 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Performance Overview Section */}
+      <section className="relative z-10 py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Section Title */}
+          <div className="text-center mb-16">
+            <span className="text-primary text-sm font-medium tracking-wider">[ PERFORMANCE OVERVIEW ]</span>
+          </div>
+          
+          {/* Statistics Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {/* Stat 1 */}
+            <div className="text-center border border-gray-800/30 p-8 rounded-lg">
+              <div className="text-4xl lg:text-5xl font-bold text-white mb-2">56</div>
+              <div className="text-gray-400 text-sm tracking-wider">PROJECTS COMPLETED</div>
+            </div>
+            
+            {/* Stat 2 */}
+            <div className="text-center border border-gray-800/30 p-8 rounded-lg">
+              <div className="text-4xl lg:text-5xl font-bold text-white mb-2">30+</div>
+              <div className="text-gray-400 text-sm tracking-wider">CLIENTS SERVED</div>
+            </div>
+            
+            {/* Stat 3 */}
+            <div className="text-center border border-gray-800/30 p-8 rounded-lg">
+              <div className="text-4xl lg:text-5xl font-bold text-white mb-2">1,317</div>
+              <div className="text-gray-400 text-sm tracking-wider">CAMPAIGNS LAUNCHED</div>
+            </div>
+            
+            {/* Stat 4 */}
+            <div className="text-center border border-gray-800/30 p-8 rounded-lg">
+              <div className="text-4xl lg:text-5xl font-bold text-white mb-2">45%</div>
+              <div className="text-gray-400 text-sm tracking-wider">REVENUE GROWTH</div>
+            </div>
+            
+            {/* Stat 5 */}
+            <div className="text-center border border-gray-800/30 p-8 rounded-lg">
+              <div className="text-4xl lg:text-5xl font-bold text-white mb-2">4</div>
+              <div className="text-gray-400 text-sm tracking-wider">TEAM MEMBER</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
