@@ -49,7 +49,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-auto">
             {/* Left Card - Image with Text Below */}
             <div className="bg-gray-900/30 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-800/50">
-              <div className="aspect-[4/3] overflow-hidden">
+              <div className="aspect-[3/4] overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1498050108023-4b2e558d2937?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
                   alt="Professional workspace with multiple monitors"
@@ -67,7 +67,7 @@ const About = () => {
             </div>
 
             {/* Right Card - Text Above, Image Below */}
-            <div className="bg-gray-900/30 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-800/50">
+            <div className="bg-gray-900/30 rounded-2xl overflow-hidden backdrop-blur-sm border border-gray-800/50 mt-12">
               <div className="p-8">
                 <p className="text-white text-lg leading-relaxed mb-8">
                   Intuition and strategy integrate the{' '}
