@@ -1,8 +1,14 @@
 import React from 'react';
 import HeroNavigation from '../components/Hero/HeroNavigation';
 import StarburstBackground from '../components/StarburstBackground';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const About = () => {
+  const heroAnimation = useScrollAnimation();
+  const bentoAnimation = useScrollAnimation();
+  const statsAnimation = useScrollAnimation();
+  const whyUsAnimation = useScrollAnimation();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-hero-dark via-hero-dark-light to-black">
       {/* Starburst Background */}
@@ -12,7 +18,12 @@ const About = () => {
       <HeroNavigation />
       
       {/* About Hero Section */}
-      <section className="relative z-10 pt-32 pb-20 min-h-[50vh] flex items-center">
+      <section 
+        ref={heroAnimation.ref}
+        className={`relative z-10 pt-32 pb-20 min-h-[50vh] flex items-center transition-all duration-1000 ${
+          heroAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-6">
           {/* About Tag */}
           <div className="text-center mb-12">
@@ -58,7 +69,12 @@ const About = () => {
       </div>
 
       {/* Bento Grid Section */}
-      <section className="relative z-10 py-20 bg-black -mt-1">
+      <section 
+        ref={bentoAnimation.ref}
+        className={`relative z-10 py-20 bg-black -mt-1 transition-all duration-1000 delay-200 ${
+          bentoAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 h-auto">
             {/* Left Card - Image with Text Below */}
@@ -102,7 +118,12 @@ const About = () => {
       </section>
 
       {/* Performance Overview Section */}
-      <section className="relative z-10 py-20 bg-black">
+      <section 
+        ref={statsAnimation.ref}
+        className={`relative z-10 py-20 bg-black transition-all duration-1000 delay-400 ${
+          statsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Title */}
           <div className="text-center mb-16">
@@ -147,7 +168,12 @@ const About = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="relative z-10 py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800">
+      <section 
+        ref={whyUsAnimation.ref}
+        className={`relative z-10 py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 transition-all duration-1000 delay-600 ${
+          whyUsAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Title */}
           <div className="text-center mb-16">
