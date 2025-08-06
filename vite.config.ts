@@ -9,14 +9,16 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  build: {
-    outDir: 'build/',  // Change default 'dist/' to 'build/'
-  },
+ 
   plugins: [
     react(),
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
+  base: '/',
+  build: {
+    outDir: 'build',  // Change default 'dist/' to 'build/'
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
