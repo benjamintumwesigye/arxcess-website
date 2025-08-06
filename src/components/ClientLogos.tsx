@@ -15,15 +15,15 @@ const ClientLogos = () => {
   return (
     <div className="relative w-full overflow-hidden">
       {/* Faded edges */}
-      <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-hero-dark to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-hero-dark to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute left-0 top-0 w-40 h-full bg-gradient-to-r from-hero-dark to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 w-40 h-full bg-gradient-to-l from-hero-dark to-transparent z-10 pointer-events-none"></div>
       
       {/* Scrolling container */}
       <div className="flex animate-scroll-left">
         {duplicatedLogos.map((logo, index) => (
           <div
             key={`${logo.name}-${index}`}
-            className="flex-shrink-0 mx-8 opacity-60 hover:opacity-100 transition-opacity duration-300"
+            className="flex-shrink-0 mx-10 opacity-60 hover:opacity-100 transition-opacity duration-300"
           >
             <img
               src={logo.image}

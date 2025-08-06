@@ -1,0 +1,30 @@
+image: node:latest  # Or node:20 for a specific version
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build  # This generates static files in 'dist/' for Vite
+  artifacts:
+    paths:
+      - dist/  # Change from 'build/' to Vite's default
+  only:
+    - main  # Or your default branch
+
+pages:
+  stage: deploy
+  script:
+    - mv dist public  # Move 'dist' to 'public/' (required for GitLab Pages)
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

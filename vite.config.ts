@@ -9,6 +9,9 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+  build: {
+    outDir: 'build/',  // Change default 'dist/' to 'build/'
+  },
   plugins: [
     react(),
     mode === 'development' &&

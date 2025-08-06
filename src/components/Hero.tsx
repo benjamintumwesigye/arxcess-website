@@ -37,9 +37,9 @@ const Hero = () => {
         </div>
 
         {/* Client Logos Section - Properly spaced at bottom */}
-        <div className="relative z-10 pb-8">
-          <div className="text-gray-400 text-sm mb-6 text-center">
-            Trusted by leading companies
+        <div className="relative z-10 pb-8 px-[10rem]">
+          <div className="text-gray-100 text-sm mb-6 text-center">
+           {`[  Trusted by leading companies  ]`}
           </div>
           <ClientLogos />
         </div>
