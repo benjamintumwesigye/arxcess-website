@@ -12,17 +12,17 @@ build:
   stage: build
   script:
     - npm install
-    - npm run build  # This generates static files in 'dist/' for Vite
+    - npm run build  # This generates static files in 'build/' 
   artifacts:
     paths:
-      - dist/  # Change from 'build/' to Vite's default
+      - build/  # Use 'build/' as your output folder
   only:
     - main  # Or your default branch
 
 pages:
   stage: deploy
   script:
-    - mv dist public  # Move 'dist' to 'public/' (required for GitLab Pages)
+    - mv build public  # Move 'build' to 'public/' (required for GitLab Pages)
   artifacts:
     paths:
       - public
