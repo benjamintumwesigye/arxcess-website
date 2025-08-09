@@ -15,9 +15,9 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
-  base: '/arxcess-website/',
+  base: '/',
   build: {
-    outDir: 'build',  // Change default 'dist/' to 'build/'
+    outDir: 'build',
   },
   resolve: {
     alias: {
