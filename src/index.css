@@ -107,7 +107,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-chirp;
+    @apply bg-background text-foreground font-[Instrument_Sans];
   }
 }
 
