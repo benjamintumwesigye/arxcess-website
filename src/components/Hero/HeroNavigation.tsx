@@ -82,7 +82,7 @@ const HeroNavigation = () => {
               <Link to="/about" className={`text-lg font-medium transition-colors ${location.pathname === '/about' ? 'text-primary' : 'text-white hover:text-primary'}`}>
                 About
               </Link>
-              <a href="#project" className="text-white text-lg font-medium hover:text-primary transition-colors">
+              {/* <a href="#project" className="text-white text-lg font-medium hover:text-primary transition-colors">
                 Project
               </a>
               <div className="space-y-4">
@@ -106,7 +106,7 @@ const HeroNavigation = () => {
               </div>
               <Button className="bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 font-semibold px-6 py-3 rounded-full uppercase text-sm tracking-wider mt-6">
                 CONTACT US
-              </Button>
+              </Button> */}
             </div>
           </SheetContent>
         </Sheet>
