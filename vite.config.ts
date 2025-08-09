@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
-  base: '/',
+  base: '/svg-hero-love-flow/',
   build: {
     outDir: 'build',  // Change default 'dist/' to 'build/'
   },
