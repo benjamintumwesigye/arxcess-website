@@ -37,14 +37,13 @@ const HeroNavigation = () => {
         <div className="hidden md:flex bg-[#0000004d] backdrop-blur-sm rounded-full px-[11px] py-[9px] flex space-x-1">
           <Link to="/" className={`text-white rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium ${location.pathname === '/' ? 'bg-white/20 hover:bg-white/30' : 'hover:bg-white/20'}`}>Home</Link>
           <Link to="/about" className={`text-white rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium ${location.pathname === '/about' ? 'bg-white/20 hover:bg-white/30' : 'hover:bg-white/20'}`}>About</Link>
-          <a href="#project" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Project</a>
+          {/* <a href="#project" className="text-white hover:bg-white/20 rounded-full px-[.85rem] py-[.45rem] transition duration-300 font-medium">Project</a>
           <div className="relative group">
             <a href="#pages" className="text-white hover:bg-white/20 rounded-full px-6 py-2 transition duration-300 flex items-center font-medium group">
               Pages 
               <ArrowDown className="ml-1 w-4 h-4 transition-transform duration-200 group-hover:hidden" />
               <ArrowUp className="ml-1 w-4 h-4 transition-transform duration-200 hidden group-hover:block" />
             </a>
-            {/* Dropdown (hidden by default, shown on hover) */}
             <div className="absolute hidden group-hover:block group-focus-within:block bg-gray-900/40 backdrop-blur-sm mt-0 pt-2 rounded-xl shadow-2xl min-w-[180px] z-50">
               <div className="bg-gray-900/90 backdrop-blur-sm rounded-xl py-2">
                 <a href="#news" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors">News</a>
@@ -53,7 +52,7 @@ const HeroNavigation = () => {
                 <a href="#changelog" className="block px-6 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors">Changelog</a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Desktop Contact Button */}
