@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
-  base: '/svg-hero-love-flow/',
+  base: '/arxcess-website/',
   build: {
     outDir: 'build',  // Change default 'dist/' to 'build/'
   },
