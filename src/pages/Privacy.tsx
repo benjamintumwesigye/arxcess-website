@@ -1,16 +1,8 @@
-import { Helmet } from "react-helmet";
-
 const Privacy = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Privacy Policy - Arxcess Mobile Apps</title>
-        <meta name="description" content="Privacy Policy for Arxcess Banking mobile applications - how we collect, use and protect your data." />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
-      
       <main className="container mx-auto px-4 py-16 max-w-4xl">
-        <div className="prose prose-lg mx-auto dark:prose-invert">
+        <div className="mx-auto">
           <h1 className="text-4xl font-bold text-foreground mb-8">
             Privacy Policy of Arxcess Mobile Apps
           </h1>
