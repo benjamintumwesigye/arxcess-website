@@ -27,9 +27,11 @@ const HeroNavigation = () => {
     }`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between p-6">
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">A</span>
-          </div>
+          <img 
+            src="/logo.png" 
+            alt="Arxcess Logo" 
+            className="w-8 h-8 rounded-lg object-contain"
+          />
           <span className="text-white font-semibold text-xl">Arxcess</span>
         </div>
 
