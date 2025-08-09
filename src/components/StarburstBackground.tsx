@@ -1,11 +1,12 @@
 import React from 'react';
+import bg from '../../public/back-blue.webp';
 
 const StarburstBackground = () => {
   return (
     <div
       className="absolute inset-0 overflow-hidden"
       style={{
-        backgroundImage: `url('/svg-hero-love-flow/back-blue.webp')`, // Path to the image in the public folder
+        backgroundImage: `url(${bg})`, // Path to the image in the public folder
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
