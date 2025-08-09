@@ -156,7 +156,7 @@ p {
 
 
 .section-stack-bg {
-    background-image: url(https://cdn.prod.website-files.com/6846e0f…/684ab7e…_hero-5.webp);
+    background-image: url('/hero-5.webp');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: contain;
